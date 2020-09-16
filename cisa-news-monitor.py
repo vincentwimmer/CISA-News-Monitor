@@ -123,27 +123,33 @@ def Main(url):
 
 	#Run forever..
 	while True:
-		#Make GET request to CISA using headers from above.
-		getLatestPost = requests.get(url, headers=headers)
+		#We can use a try/except statement to catch request failures as well as
+		# keeping the loop going instead of breaking on errors.
+		try:
+			#Make GET request to CISA using headers from above.
+			getLatestPost = requests.get(url, headers=headers)
 
-		#Send text from request to our parsing function and wait for returned data.
-		newPost = getInfo(getLatestPost.text)
+			#Send text from request to our parsing function and wait for returned data.
+			newPost = getInfo(getLatestPost.text)
 
-		#Check if fetched data differs from previous fetch.
-		if newPost[0] != oldPost[0]:
+			#Check if fetched data differs from previous fetch.
+			if newPost[0] != oldPost[0]:
 
-			#Post these prints to Discord, Twitter, or even Slack? Up to you!
-			print(newPost[0])
-			print(newPost[1])
-			print(newPost[2])
-			print(newPost[3])
+				#Post these prints to Discord, Twitter, or even Slack? Up to you!
+				print(newPost[0])
+				print(newPost[1])
+				print(newPost[2])
+				print(newPost[3])
 
-			#Clear and replace old fetch with new fetch
-			oldPost.clear()
-			oldPost = newPost
+				#Clear and replace old fetch with new fetch
+				oldPost.clear()
+				oldPost = newPost
 
-			#Let's not spam the government, take a nap.
-			time.sleep(sleepTime)
+				#Let's not spam the government, take a nap.
+				time.sleep(sleepTime)
+		except:
+			#Let's wait 30sec and try again.
+			time.sleep(30)
 
 #Bring monitor online.
 Main(url)
