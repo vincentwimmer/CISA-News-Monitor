@@ -108,12 +108,12 @@ def getInfo(postInfo):
 			alertURL = "https://us-cert.cisa.gov/"+alertURLFixed[0]
 
 		#Now the variables are brought together as a list and assigned to alertData.
-		# This makes handling the data very easy and clean.
+		# This makes handling the data very clean and easy.
 		alertData = ([alertTitle, alertDate, alertImgSrc, alertURL])
 	
-	#See?
 	#This is where the sum of everything we just accomplished gets pushed back to
 	# the newPost variable in the Main function.
+	# See what I mean about clean and easy?
 	return alertData
 	
 #This is our main loop/function
