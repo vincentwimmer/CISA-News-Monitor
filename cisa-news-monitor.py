@@ -65,6 +65,12 @@ def getInfo(postInfo):
 		#Now we can assign "alertHTML" a smaller chunk of raw HTML code to work with.
 		# This way we don't have to work with an ENTIRE page of HTML and 
 		# instead just the <div>'s HTML we need.
+		# The numbers here might need some explanation:
+		# "pos" is a number as mentioned above. Let's pretend it's 9000 in this case.
+		# +55 is the length of our search string which moves the "cursor" to the end of the search string.
+		# +1000 is the rough estimate of the block of HTML we want
+		# So by saying "(pos+55) : (pos+1000)" we're saying select everything 
+		# AFTER '<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 ">' and up to 1000 characters.
 		alertHTML = (postInfo[(pos+55) : (pos+1000)])
 
 		####
