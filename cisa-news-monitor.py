@@ -1,18 +1,13 @@
 """
-Lately I've been creating A LOT of monitors to check on things all over the internet. The monitors
-have gotten better over time and even more lightweight everytime I make one.
+Lately I've been creating A LOT of monitors to check on things all over the internet.
 
-I recently even wrote a monitor to check MicroCenter's inventory on a monitor that had sold out.
-
-A Monitor Monitor..
-
-Anyway, here's a very basic monitor to check CISA.gov for news updates.
+Here's a very basic monitor to check CISA.gov for news updates.
 
 This should provide you with everything you need as a foundation for your own monitor.
 
 	-Vince
 
-p.s. This is written in Python3
+Written in Python3
 """
 
 #Here we use all native libraries. This code is meant to work on anything.
