@@ -52,10 +52,10 @@ def getInfo(postInfo):
 
 	#Before we do anything, lets check if the "latest post" <div> exists.
 	# If it doesn't, postInfo.find will return a "-1"
-	if postInfo.find('<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 ">') != -1:
+	if postInfo.find('<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-1">') != -1:
 
 		#If we find the <div> we can assign "pos" to the exact character placement in the full text by number.
-		pos = postInfo.find('<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 ">')
+		pos = postInfo.find('<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-1">')
 
 		#Now we can assign "alertHTML" a smaller chunk of raw HTML code to work with.
 		# This way we don't have to work with an ENTIRE page of HTML and 
