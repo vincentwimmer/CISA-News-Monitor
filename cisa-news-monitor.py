@@ -10,7 +10,7 @@ This should provide you with everything you need as a foundation for your own mo
 Written in Python3
 """
 
-#Here we use all native libraries. This code is meant to work on anything.
+# Here we use all native libraries. By using these core libraries you can run this code on nearly any device.
 # First is Requests, used for making connections to the internet and getting or sending data.
 import requests
 # Next is Re, this is a VERY powerful library for maniuplating text and other things.
